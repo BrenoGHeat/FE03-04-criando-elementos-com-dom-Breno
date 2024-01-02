@@ -16,8 +16,33 @@ const products = [
     price: 89.99,
   },
   {
-    name: "Chapéu",
+    name: "Boné",
     price: 19.99,
   },
+  {
+    name: "Camisa do Flamengo 2024",
+    price: 199.99,
+  },
 ];
+
+const productsList = document.querySelector("ul");
+
+for(let i = 0 ; i < products.length ; i++){
+
+const listItem = document.createElement("li");
+
+const productName = document.createElement("h3");
+const productPrice = document.createElement("p");
+const addToCartButton = document.createElement("button");
+
+productName.innerText = products[i].name;
+productPrice.innerText = products[i].price;
+addToCartButton.innerText = "Adicionar ao carrinho";
+
+listItem.appendChild(productName);
+listItem.appendChild(productPrice);
+listItem.appendChild(addToCartButton);
+
+productsList.appendChild(listItem);
+}
 
